@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="ourscriptA.js"></script>
+
+  <title>Booking.com(A)</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/all.css" rel="stylesheet"> <!--load all styles -->
+
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">Booking.com</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+      
+          <button type="button" class="btn btn-light">List your property</button>
+          &nbsp;&nbsp;&nbsp;&nbsp;
+          <button type="button" class="btn btn-primary">Register</button>
+          &nbsp;&nbsp;
+          <button type="button" class="btn btn-primary">Sign in</button>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Content -->
+  <div class="container">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-item nav-link active" href="#">Stays <span class="sr-only">(current)</span></a>
+          <a class="nav-item nav-link" href="#">Flights</a>
+          <a class="nav-item nav-link" href="#">Flight + Hotel</a>
+          <a class="nav-item nav-link" href="#">Car rentals</a>
+          <a class="nav-item nav-link" href="#">Attractions</a>
+          <a class="nav-item nav-link" href="#">Airport Taxis</a>
+        </div>
+      </div>
+    </nav>
+  </div>
+<br>
+<br>
+  <div class="container">
+    <h3>Find deals on hotels, homes and much more...</h2>
+    <p>From cosy country homes to funky city flats</p>
+    <br>
+    <input type="text" class="form-control" placeholder="Where are you going?">
+    <br>
+    <input type="text" class="form-control" placeholder="Check-in Date">
+    <br>
+    <input type="text" class="form-control" placeholder="Check-out Date">
+    <br>
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <div class="form-group">
+            <label for="exampleFormControlSelect2">Adults</label>
+            <select multiple class="form-control" id="exampleFormControlSelect2">
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+              <option>Custom<input type="number" class="form-control" placeholder="Custom"></option>
+            </select>
+          </div>
+        </div>
+        <div class="col">
+          <div class="form-group">
+            <label for="exampleFormControlSelect2">Children</label>
+            <select multiple class="form-control" id="exampleFormControlSelect2">
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+              <option>Custom<input type="number" class="form-control" placeholder="Custom"></option>
+            </select>
+          </div>
+        </div>
+        <div class="col">
+          <div class="form-group">
+            <label for="exampleFormControlSelect2">Rooms</label>
+            <select multiple class="form-control" id="exampleFormControlSelect2">
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+              <option>Custom<input type="number" class="form-control" placeholder="Custom"></option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>  
+    <button type="button" id="end" class="btn btn-primary">Search</button>
+    <br>
+      
+      
+    <!-- Time-recording script -->  
+    <input type="hidden" name="date" id="date" value=""/>
+    <script>
+        var id = prompt("Please enter your initials (first letter of your name and first name of your surname), and then proceed to fill the form with the provided information","Example: AB");
+        $(document).ready(function(){
+        $("input[name=\"date\"]").val(+new Date());
+        });
+        document.getElementById("end").onclick = function(){
+            $("input[name=\"date\"]").val(function(){
+                return String(new Date() - document.getElementById("date").value);
+            })
+            alert("You took " + document.getElementById("date").value + " miliseconds to complete the form.");
+            var results = [id,document.getElementById("date").value];
+            console.log(results);
+        };
+    </script>
+    <!-- End of script --> 
+      
+  </div>
+  <br>
+  <div class="container">
+    <h3>Explore India</h3>
+    <p>These popular destinations have a lot to offer</p>
+    <div class="row">
+      <div class="col-3">
+        <img src="img1.png">
+        <br>
+        <h3>New Delhi</h3>
+        <p>2,907 properties</p>
+      </div>
+      <div class="col-3">
+        <img src="img2.png">
+        <br>
+        <h3>Mumbai</h3>
+        <p>1,969 properties</p>
+      </div>
+      <div class="col-3">
+        <img src="img3.png">
+        <br>
+        <h3>Bangalore</h3>
+        <p>2,053 properties</p>
+      </div>
+      <div class="col-3">
+        <img src="img4.png">
+        <br>
+        <h3>North Goa</h3>
+        <p>3,894 properties</p>
+      </div>
+    </div>
+    <br>
+    <div class="row">
+      <div class="col-6">
+        <img src="img6.png">
+      </div>
+      <div class="col-6">
+        <img src="img7.png">
+      </div>
+    </div>
+    <br>
+    <div class="row">
+      <div class="col-5">
+        <img src="img8.png">
+      </div>
+      <div class="col-5">
+        <img src="img9.png">
+      </div>
+      <div class="col-2">
+        <img src="img10.png">
+      </div>
+    </div>
+  </div>
+  <br>
+  <div class="container">
+    <h3>Browse by property type</h3>
+    <br>
+    <div class="row">
+      <div class="col-3">
+        <img src="img11.png">
+        <br>
+        <h3>Hotels</h3>
+        <p>772,086 hotels</p>
+      </div>
+      <div class="col-3">
+        <img src="img12.png">
+        <br>
+        <h3>Apartments</h3>
+        <p>719,043 apartments</p>
+      </div>
+      <div class="col-3">
+        <img src="img13.png">
+        <br>
+        <h3>Resorts</h3>
+        <p>17,659 resorts</p>
+      </div>
+      <div class="col-3">
+        <img src="img14.png">
+        <br>
+        <h3>Villas</h3>
+        <p>371,203 villas</p>
+      </div>
+    </div>    
+  </div>
+  <br>
+  <div class="container">
+    <h3>Homes guests love</h3>
+    <div class="row">
+      <div class="col-3">
+        <img src="img15.png">
+        <br>
+        <h3>Zoku Amsterdam</h3>
+        <p>Amsterdam</p>
+        <img src="img16.png">
+      </div>
+      <div class="col-3">
+        <img src="img17.png">
+        <br>
+        <h3>One Commercial Street Apartment</h3>
+        <p>London</p>
+        <img src="img18.png">
+      </div>
+      <div class="col-3">
+        <img src="img19.png">
+        <br>
+        <h3>The Old Town Square</h3>
+        <p>Prague</p>
+        <img src="img20.png">
+      </div>
+      <div class="col-3">
+        <img src="img21.png">
+        <br>
+        <h3>Apartamento La Paz</h3>
+        <p>Madrid</p>
+        <img src="img22.png">
+      </div>
+    </div>
+  </div>
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.slim.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
