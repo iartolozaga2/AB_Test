@@ -142,7 +142,7 @@
       <!-- Time-recording script -->
       <input type="hidden" name="date" id="date" value=""/>
       <script>
-        var id = prompt("Please enter your initials next to today's date, and then proceed to fill the form with the provided information","Example: AB 1704");
+        var id = new Date();
         $(document).ready(function(){
         $("input[name=\"date\"]").val(+new Date());
         });
