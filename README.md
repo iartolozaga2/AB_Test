@@ -1,1 +1,1 @@
-hello
+WARNING: If the Katalon Tests (AB_Tests folder) want to be tested, the file import route in the test scripts should be changed to the directory in which the test files have been saved. Right now they are set to the local route in one of our PCs.
